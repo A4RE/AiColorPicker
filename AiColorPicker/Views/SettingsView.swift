@@ -10,8 +10,8 @@ struct SettingsView: View {
             Form {
                 Section("select_color_theme_title") {
                     Picker("color theme", selection: $settingsViewModel.selectedTheme) {
-                        ForEach(SettingsViewModel.AppTheme.allCases) { lang in
-                            Text(lang.rawValue).tag(lang)
+                        ForEach(SettingsViewModel.AppTheme.allCases) { theme in
+                            Text(LocalizedStringKey(theme.rawValue)).tag(theme)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -19,7 +19,7 @@ struct SettingsView: View {
                 Section("select_language_title") {
                     Picker("Language", selection: $settingsViewModel.selectedLanguage) {
                         ForEach(SettingsViewModel.AppLanguage.allCases) { lang in
-                            Text(lang.label).tag(lang)
+                            Text(LocalizedStringKey(lang.label)) .tag(lang)
                         }
                     }
                     .pickerStyle(.segmented)

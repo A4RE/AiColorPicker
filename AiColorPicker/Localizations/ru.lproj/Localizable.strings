@@ -4,3 +4,10 @@
 
 "select_color_theme_title" = "Тема оформления";
 "select_language_title" = "Язык";
+
+"english_lang" = "Английский";
+"russian_lang" = "Русский";
+
+"system_theme" = "Системная";
+"light_theme" = "Светлая";
+"dark_theme" = "Темная";

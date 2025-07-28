@@ -4,3 +4,10 @@
 
 "select_color_theme_title" = "App color theme";
 "select_language_title" = "Language";
+
+"english_lang" = "English";
+"russian_lang" = "Russian";
+
+"system_theme" = "System";
+"light_theme" = "Light";
+"dark_theme" = "Dark";

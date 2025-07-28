@@ -33,6 +33,7 @@ struct AiColorPickerApp: App {
 }
 
 struct RootView: View {
+    
     @EnvironmentObject var appStateViewModel: AppStateViewModel
     @EnvironmentObject var viewModel: SettingsViewModel
     @EnvironmentObject var reloadTrigger: AppReloadTrigger
@@ -43,7 +44,8 @@ struct RootView: View {
             .environmentObject(viewModel)
             .environmentObject(reloadTrigger)
             .environment(\.locale, Locale(identifier: viewModel.selectedLanguage.id))
-            .onChange(of: viewModel.selectedLanguage) { _, _ in
+            .onChange(of: viewModel.selectedLanguage) { _, value in
+                UserDefaults.standard.set(value.id, forKey: "selected_language")
                 appStateViewModel.selectedTab = 2
                 reloadTrigger.reload() // 💥 Перезапуск интерфейса
             }
