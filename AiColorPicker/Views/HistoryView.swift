@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  HistoryView.swift
 //  AiColorPicker
 //
 //  Created by A4reK0v on 28.07.2025.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HistoryView: View {
     var body: some View {
         NavigationStack {
             VStack {
                 
             }
-            .navigationTitle(Text("home_tab"))
+            .navigationTitle(Text("history_tab"))
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HistoryView()
 }
