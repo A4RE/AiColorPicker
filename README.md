@@ -32,3 +32,5 @@
 
 The app is currently in development and will be available on the **App Store**.  
 For now, you can build it using **Xcode**:
+
+See the [LICENSE](LICENSE) file for details.
