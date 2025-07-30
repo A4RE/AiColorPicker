@@ -2,12 +2,13 @@ import SwiftUI
 
 struct MainTabView: View {
     
+    let size: CGSize
     @EnvironmentObject var settingViewModel: SettingsViewModel
     @EnvironmentObject var appStateViewModel: AppStateViewModel
     
     var body: some View {
         TabView(selection: $appStateViewModel.selectedTab) {
-            HomeView()
+            HomeView(size: size)
                 .tabItem {
                     Label("home_tab", systemImage: "house")
                 }
@@ -25,8 +26,4 @@ struct MainTabView: View {
         }
         .environmentObject(settingViewModel)
     }
-}
-
-#Preview {
-    MainTabView()
 }

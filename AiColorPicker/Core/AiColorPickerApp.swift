@@ -39,15 +39,17 @@ struct RootView: View {
     @EnvironmentObject var reloadTrigger: AppReloadTrigger
     
     var body: some View {
-        MainTabView()
-            .id(reloadTrigger.reloadID)
-            .environmentObject(viewModel)
-            .environmentObject(reloadTrigger)
-            .environment(\.locale, Locale(identifier: viewModel.selectedLanguage.id))
-            .onChange(of: viewModel.selectedLanguage) { _, value in
-                UserDefaults.standard.set(value.id, forKey: "selected_language")
-                appStateViewModel.selectedTab = 2
-                reloadTrigger.reload() // 💥 Перезапуск интерфейса
-            }
+        GeometryReader { geo in
+            MainTabView(size: geo.size)
+                .id(reloadTrigger.reloadID)
+                .environmentObject(viewModel)
+                .environmentObject(reloadTrigger)
+                .environment(\.locale, Locale(identifier: viewModel.selectedLanguage.id))
+                .onChange(of: viewModel.selectedLanguage) { _, value in
+                    UserDefaults.standard.set(value.id, forKey: "selected_language")
+                    appStateViewModel.selectedTab = 2
+                    reloadTrigger.reload() // 💥 Перезапуск интерфейса
+                }
+        }
     }
 }

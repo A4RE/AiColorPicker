@@ -2,6 +2,8 @@
 "history_tab" = "История";
 "settings_tab" = "Настройки";
 
+"home_title" = "Выбор цвета";
+
 "select_color_theme_title" = "Тема оформления";
 "select_language_title" = "Язык";
 
@@ -11,3 +13,9 @@
 "system_theme" = "Системная";
 "light_theme" = "Светлая";
 "dark_theme" = "Темная";
+
+"main_color" = "Главый цвет";
+"select_color" = "Выберете главный цвет";
+"additional_colors_count" = "Количество дополнительных цветов";
+"describe_color_purpose" = "Опишите, для чего вам нужны цвета";
+"example_color_purpose" = "Например: для сайта про кофе";

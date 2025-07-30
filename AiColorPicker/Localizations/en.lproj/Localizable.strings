@@ -2,6 +2,8 @@
 "history_tab" = "History";
 "settings_tab" = "Settings";
 
+"home_title" = "Color picker";
+
 "select_color_theme_title" = "App color theme";
 "select_language_title" = "Language";
 
@@ -11,3 +13,9 @@
 "system_theme" = "System";
 "light_theme" = "Light";
 "dark_theme" = "Dark";
+
+"main_color" = "Main color";
+"select_color" = "Pick main color";
+"additional_colors_count" = "Number of additional colors";
+"describe_color_purpose" = "Describe what you need the colors for";
+"example_color_purpose" = "For example: for a coffee website";
