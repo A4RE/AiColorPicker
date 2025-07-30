@@ -18,7 +18,7 @@ struct MainTabView: View {
                     Label("history_tab", systemImage: "list.clipboard")
                 }
                 .tag(1)
-            SettingsView()
+            SettingsView(size: size)
                 .tabItem {
                     Label("settings_tab", systemImage: "gearshape")
                 }
